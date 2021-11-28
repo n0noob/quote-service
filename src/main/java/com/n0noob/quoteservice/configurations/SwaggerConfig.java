@@ -1,4 +1,5 @@
 //package com.n0noob.quoteservice.configurations;
+
 //
 //
 //import org.springframework.context.annotation.Bean;
