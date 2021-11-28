@@ -3,7 +3,6 @@ package com.n0noob.quoteservice.entities;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 @Builder(toBuilder = true)
