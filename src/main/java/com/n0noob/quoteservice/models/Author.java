@@ -14,8 +14,6 @@ import java.time.LocalDateTime;
 @ToString
 public class Author {
 
-    private Long id;
-
     @NotNull(message = "fullName is mandatory")
     @Size(min = 2, max = 50, message = "fullName length should be in range 2 to 50 (both inclusive)")
     private String fullName;

@@ -13,7 +13,7 @@ import javax.validation.Valid;
 @Tag(name = "Author")
 @Slf4j
 @RestController
-@RequestMapping("rest_best_practices/v1/authors/")
+@RequestMapping("quote-api/v1/authors/")
 public class AuthorController {
 
     @Autowired
@@ -36,7 +36,7 @@ public class AuthorController {
     @Operation(summary = "Update author corresponding to a given author id")
     @PutMapping("/")
     public Long updateAuthor(@Valid @RequestBody Author author) {
-        log.info("Received request for updating author with id : " + author.getId());
+        log.info("Received request for updating author with id : " + author.getFullName());
         return authorService.updateAuthor(author);
     }
 

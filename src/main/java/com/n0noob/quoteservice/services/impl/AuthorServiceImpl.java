@@ -33,9 +33,10 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public Long updateAuthor(com.n0noob.quoteservice.models.Author author) {
-        authorRepository.findById(author.getId()).orElseThrow();
+        Author authorOld =  authorRepository.findAnyByFullName(author.getFullName());
 
         Author authorEntity = authorMapper.map(author);
+        authorEntity.setId(authorOld.getId());
         return authorRepository.save(authorEntity).getId();
     }
 

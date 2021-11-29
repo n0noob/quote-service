@@ -13,7 +13,7 @@ import javax.validation.Valid;
 @Tag(name = "Quote")
 @Slf4j
 @RestController
-@RequestMapping("rest_best_practices/v1/quotes/")
+@RequestMapping("quote-api/v1/quotes/")
 public class QuoteController {
 
     @Autowired
