@@ -31,10 +31,6 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/quote-api/v1/authors/*").authenticated()
-                .antMatchers(HttpMethod.POST, "/quote-api/v1/authors/*").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/quote-api/v1/authors/*").hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/quote-api/v1/authors/*").hasRole("ADMIN")
                 .antMatchers("/quote-api/v1/quotes/*").authenticated()
                 .anyRequest().authenticated()
                 .and()
